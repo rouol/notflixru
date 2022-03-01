@@ -18,7 +18,7 @@
 cURL **notflixru** в ваш **$PATH** и выдайте разрешения для запуска.
 
 ```sh
-sudo curl -sL "https://github.com/rouol/notflixru/blob/master/notflixru" -o /usr/local/bin/notflixru
+sudo curl -sL "https://raw.githubusercontent.com/rouol/notflixru/master/notflixru" -o /usr/local/bin/notflixru
 sudo chmod +x /usr/local/bin/notflixru
 ```
 - Для обновления, просто сделайте `curl` снова, в повторном `chmod` нет необходимости.
