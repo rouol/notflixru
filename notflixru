@@ -2,7 +2,7 @@
 
 query=$(printf '%s' "$*" | tr ' ' '+' )
 # default web source
-magnet=$(curl -k -s "https://nyaa.si/?f=0&c=0_0&q=${query}" | grep -Po "magnet:$
+magnet=$(curl -s http://rutor.info/search/0/0/100/0/$query | grep -Po "magnet:$
 # optional web source
-#magnet=$(curl -s http://rutor.info/search/0/0/100/0/$query | grep -Po "magnet:$
+#magnet=$(curl -k -s "https://nyaa.si/?f=0&c=0_0&q=${query}" | grep -Po "magnet:$
 peerflix $magnet --list --vlc
