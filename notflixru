@@ -1,0 +1,5 @@
+#!/bin/sh
+
+query=$(printf '%s' "$*" | tr ' ' '+' )
+magnet=$(curl -s http://rutor.info/search/$query | grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" | head -n 1)
+peerflix $magnet --vlc
