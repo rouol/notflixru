@@ -16,11 +16,11 @@
 cURL **notflixru** в ваш **$PATH** и выдайте разрешения для запуска.
 
 ```sh
-$ sudo curl -sL "https://github.com/rouol/notflixru/blob/master/notflixru" -o /usr/local/bin/notflix
+$ sudo curl -sL "https://github.com/rouol/notflixru/blob/master/notflixru" -o /usr/local/bin/notflixru
 $ sudo chmod +x /usr/local/bin/notflixru
 ```
 - Для обновления, просто сделайте `curl` снова, в повторном `chmod` нет необходимости.
-- Для удаления программы, просто удалите `notflix` из вашего **$PATH**, например `sudo rm -f /usr/local/bin/notflix`.
+- Для удаления программы, просто удалите `notflix` из вашего **$PATH**, например `sudo rm -f /usr/local/bin/notflixru`.
 
 *Для пользователей macOS: необходимо установить полноценный grep, например с помощью homebrew так: ```brew install grep```. После установки нужно также добавить новый grep в ваш **$PATH**, выполнив команду
 
