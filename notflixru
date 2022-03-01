@@ -1,5 +1,8 @@
 #!/bin/sh
 
 query=$(printf '%s' "$*" | tr ' ' '+' )
-magnet=$(curl -s http://rutor.info/search/0/0/100/0/$query | grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" | head -n 1)
-peerflix $magnet --vlc
+# default web source
+magnet=$(curl -k -s "https://nyaa.si/?f=0&c=0_0&q=${query}" | grep -Po "magnet:$
+# optional web source
+#magnet=$(curl -s http://rutor.info/search/0/0/100/0/$query | grep -Po "magnet:$
+peerflix $magnet --list --vlc
