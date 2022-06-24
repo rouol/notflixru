@@ -11,7 +11,7 @@
 ## Зависимости
 
 * [peerflix](https://github.com/mafintosh/peerflix) - Программа для стриминга торрентов `sudo npm install peerflix -g`
-
+* [WARP](https://1.1.1.1/) - позволяет получать доступ к заблокированным страницам, инструкция по его установке тут: https://developers.cloudflare.com/warp-client/get-started/
 ## Установка
 
 ### cURL
