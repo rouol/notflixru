@@ -1,8 +1,9 @@
 #!/bin/sh
 
 query=$(printf '%s' "$*" | tr ' ' '+' )
+warp-cli connect
+echo "Looking for a magnet link..."
 # default web source
-magnet=$(curl -s https://rutor.org/search/1/0/100/0/$query | grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" | head -n 1)
-# optional web source
-#magnet=$(curl -k -s "https://nyaa.si/?f=0&c=0_0&q=${query}" | grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" | head -n 1)
+magnet=$(curl -s https://rutor.org/search/1/0/100/0/$query | grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" |># optional web source
+#magnet=$(curl -k -s "https://nyaa.si/?f=0&c=0_0&q=${query}" | grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*">warp-cli disconnect
 peerflix $magnet --list --vlc
